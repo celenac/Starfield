@@ -5,12 +5,13 @@ double red=(double)(Math.random()*155+40);
 double green=(double)(Math.random()*155+40);
 double blue=(double)(Math.random()*155+40);
 int OddColor; 
+int ArrayLength=800;
 void setup()
 {
   size(800, 800);
   background(0);
   noStroke();
-  particle=new Particle[800];
+  particle=new Particle[ArrayLength];
   oddball=new Particle[1];
   for (int i=0; i<particle.length; i++)
   {
