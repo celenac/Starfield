@@ -1,6 +1,4 @@
 Particle [] particle;
-Particle [] oddball;
-Particle [] jumbo;
 boolean drawAgain=false;
 double red=(double)(Math.random()*155+40);
 double green=(double)(Math.random()*155+40);
@@ -15,10 +13,10 @@ void setup()
   particle=new Particle[ArrayLength];
   for (int i=0; i<particle.length; i++)
   {
-    particle[0]=new OddballParticle();
-    particle[1]=new Jumbo();
     particle[i]=new NormalParticle();
   }
+      particle[0]=new OddballParticle();
+    particle[1]=new Jumbo();
 }
 void draw()
 {
@@ -62,10 +60,10 @@ class NormalParticle implements Particle
       particle=new Particle[500];
       for (int i=0; i<particle.length; i++)
       {
-        particle[0]=new OddballParticle();
-        particle[1]=new Jumbo();
         particle[i]=new NormalParticle();
       }
+      particle[0]=new OddballParticle();
+        particle[1]=new Jumbo();
       x=(double)(Math.random()*10+290);
       y=(double)(Math.random()*10+290);
       Color=color((int)red+shade, (int)green+shade, (int)blue+shade);
