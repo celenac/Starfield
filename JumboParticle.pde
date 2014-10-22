@@ -15,8 +15,8 @@ void setup()
   {
     particle[i]=new NormalParticle();
   }
-      particle[0]=new OddballParticle();
-    particle[1]=new Jumbo();
+  particle[0]=new OddballParticle();
+  particle[1]=new Jumbo();
 }
 void draw()
 {
@@ -63,7 +63,7 @@ class NormalParticle implements Particle
         particle[i]=new NormalParticle();
       }
       particle[0]=new OddballParticle();
-        particle[1]=new Jumbo();
+      particle[1]=new Jumbo();
       x=(double)(Math.random()*10+290);
       y=(double)(Math.random()*10+290);
       Color=color((int)red+shade, (int)green+shade, (int)blue+shade);
@@ -77,7 +77,12 @@ class Jumbo extends NormalParticle
   Jumbo()
   {
     Size=75;
-  }  
+  }
+  public void show()
+  {
+    println(x + ", " + y);
+    super.show();
+  }
 }
 interface Particle
 {
