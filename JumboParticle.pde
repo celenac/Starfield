@@ -78,11 +78,6 @@ class Jumbo extends NormalParticle
   {
     Size=75;
   }
-  public void show()
-  {
-    println(x + ", " + y);
-    super.show();
-  }
 }
 interface Particle
 {
